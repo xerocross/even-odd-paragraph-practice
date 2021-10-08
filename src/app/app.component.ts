@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'game-practice';
+  paragraphs : number[] = [];
+
+  onNewParagraphAdded(event : {increment : number}) {
+    console.log(event);
+    this.paragraphs.push(event.increment)
+    console.log("paragraphs: ");
+    console.log(this.paragraphs);
+  }
 }
